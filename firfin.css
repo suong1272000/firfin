@@ -22,19 +22,79 @@
     --neutrals-gray-200: #a6a4a4;
 }
 
-header{
+/* header,section 전체를 쓰는것은 지양하고 class로 통일성을 줄 것 */
+.header{
     width: 100vw;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+.inner-head{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.logo-box{
+    width: 100%;
+}
+.list-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+}
+.list-box > li{
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 700;
+}
+.list-box > li:hover{
+    color: white;
+}
+.list-box > .blog:hover + .hover-menu{
+    display: block;
+}
+.dorp-box{
+    position: relative;
+    left: 0px;
+    top: 180px;
+    padding: 32px 20px; 
+    border-radius: 4px;
+    /* display: none; */
+    z-index: 3;
+    background-color: white;
+    box-shadow: 30px 30px 90px rgba(0,0,0,.24);
+}
+.hover-menu > li{
+    display: block;
+    position: relative;
+    width: 360px;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-section{
+
+.main-section{
     width: 100vw;
     height: 1080px;
     background-color: var(--primary-purple-200);
 }
-
 .inner-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
 }
-
 .title-text{
     font-family: 'Pretendard';
     font-weight: 700;
@@ -43,8 +103,9 @@ section{
     color: var(--font-font-black);
 }
 .sub-text{
+    font-family: 'Pretendard';
     font-weight: 700;
-    font-size: var(--font-size-midium);
+    font-size: 28px;
     line-height: 36px;
     color: var(--font-font-black);
     margin-top: 40px;
@@ -52,7 +113,6 @@ section{
 .download-area{
     margin-top: 50px;
 }
-
 .button-boxs > button{
     width: 180px;
     height: 58px;
@@ -67,25 +127,25 @@ section{
     margin-left: 16px;
     background-image: url(img_top_google_store.png);
 }
-
 .img-area{
-
+    margin-left: 200px;
     width: 670px;
     height: 700px;
 }
 .bg-img > .wall-img{
     position: relative;
     top: 0px;
-    right: 0px;
+    right: -100px;
     z-index: 1;
     width: 85%;
     height: 85%;
 }
 .bg-img > .card-img{
     position: relative;
-    top: -650px;
+    top: -600px;
     left: -350px;
     z-index: 2;
     width: 960px;
     height: 540px;
 }
+
